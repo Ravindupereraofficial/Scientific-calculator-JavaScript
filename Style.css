@@ -1,0 +1,92 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #000;
+    font-family: Arial, sans-serif;
+}
+
+.calculator {
+    width: 340px;
+    background-color: #1c1c1c;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.8);
+}
+
+#inputnumber {
+    width: 100%;
+    padding: 20px;
+    font-size: 2em;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    text-align: right;
+    box-sizing: border-box;
+    outline: none;
+    margin-bottom: 15px;
+}
+
+#printoutput {
+    color: #999;
+    text-align: right;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    border-spacing: 8px;
+    border-collapse: separate;
+}
+
+input[type="button"] {
+    width: 100%;
+    padding: 20px;
+    font-size: 1.5em;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.1s ease, box-shadow 0.2s;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    color: #fff;
+}
+
+.number {
+    background-color: #333;
+}
+
+.function {
+    background-color: #d4d4d2;
+    color: #000;
+}
+
+.operator {
+    background-color: #ff9500;
+}
+
+.equals {
+    background-color: #ff9500;
+}
+
+input[type="button"]:hover {
+    transform: scale(1.05);
+}
+
+input[type="button"]:active {
+    transform: scale(0.98);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+input[type="button"].operator,
+input[type="button"].equals {
+    font-weight: bold;
+}
+
+input[type="button"].number,
+input[type="button"].function {
+    font-weight: normal;
+}

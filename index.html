@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator">
+        <table>
+            <tr>
+                <td colspan="4">
+                    <input type="text" placeholder="Enter Values" id="inputnumber">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                   <h5 id="printoutput">ANSWER</h5>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="button" value="AC" class="function" onclick="console.log();"></td>
+                <td><input type="button" value="+/-" class="function" onclick="console.log();"></td>
+                <td><input type="button" value="%" class="function" onclick="console.log();"></td>
+                <td><input type="button" value="/" class="operator" onclick="console.log();"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="7" class="number" onclick="console.log();"></td>
+                <td><input type="button" value="8" class="number" onclick="console.log();"></td>
+                <td><input type="button" value="9" class="number" onclick="console.log();"></td>
+                <td><input type="button" value="x" class="operator" onclick="console.log();"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="4" class="number" onclick="console.log();"></td>
+                <td><input type="button" value="5" class="number" onclick="console.log();"></td>
+                <td><input type="button" value="6" class="number" onclick="console.log();"></td>
+                <td><input type="button" value="-" class="operator" onclick="console.log();"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="1" class="number" onclick="console.log();"></td>
+                <td><input type="button" value="2" class="number" onclick="console.log();"></td>
+                <td><input type="button" value="3" class="number" onclick="console.log();"></td>
+                <td><input type="button" value="+" class="operator" onclick="console.log();"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="00" class="number" onclick="console.log();"></td>
+                <td><input type="button" value="0" class="number" onclick="console.log();"></td>
+                <td><input type="button" value="." class="number" onclick="console.log();"></td>
+                <td><input type="button" value="=" class="equals" id="getanswer" onclick="calc()"></td>
+            </tr>
+        </table>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
