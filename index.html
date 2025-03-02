@@ -8,48 +8,52 @@
 </head>
 <body>
     <div class="calculator">
-        <table>
-            <tr>
-                <td colspan="4">
-                    <input type="text" placeholder="Enter Values" id="inputnumber">
-                </td>
-            </tr>
-            <tr>
-                <td colspan="4">
-                   <h5 id="printoutput">ANSWER</h5>
-                </td>
-            </tr>
-            <tr>
-                <td><input type="button" value="AC" class="function" onclick="console.log();"></td>
-                <td><input type="button" value="+/-" class="function" onclick="console.log();"></td>
-                <td><input type="button" value="%" class="function" onclick="console.log();"></td>
-                <td><input type="button" value="/" class="operator" onclick="console.log();"></td>
-            </tr>
-            <tr>
-                <td><input type="button" value="7" class="number" onclick="console.log();"></td>
-                <td><input type="button" value="8" class="number" onclick="console.log();"></td>
-                <td><input type="button" value="9" class="number" onclick="console.log();"></td>
-                <td><input type="button" value="x" class="operator" onclick="console.log();"></td>
-            </tr>
-            <tr>
-                <td><input type="button" value="4" class="number" onclick="console.log();"></td>
-                <td><input type="button" value="5" class="number" onclick="console.log();"></td>
-                <td><input type="button" value="6" class="number" onclick="console.log();"></td>
-                <td><input type="button" value="-" class="operator" onclick="console.log();"></td>
-            </tr>
-            <tr>
-                <td><input type="button" value="1" class="number" onclick="console.log();"></td>
-                <td><input type="button" value="2" class="number" onclick="console.log();"></td>
-                <td><input type="button" value="3" class="number" onclick="console.log();"></td>
-                <td><input type="button" value="+" class="operator" onclick="console.log();"></td>
-            </tr>
-            <tr>
-                <td><input type="button" value="00" class="number" onclick="console.log();"></td>
-                <td><input type="button" value="0" class="number" onclick="console.log();"></td>
-                <td><input type="button" value="." class="number" onclick="console.log();"></td>
-                <td><input type="button" value="=" class="equals" id="getanswer" onclick="calc()"></td>
-            </tr>
-        </table>
+        <div class="display">
+            <div id="previous"></div>
+            <div id="current">0</div>
+        </div>
+        <div class="buttons">
+            <button class="scientific" onclick="addFunction('sin(')">sin</button>
+            <button class="scientific" onclick="addFunction('cos(')">cos</button>
+            <button class="scientific" onclick="addFunction('tan(')">tan</button>
+            <button class="scientific" onclick="addFunction('log(')">log</button>
+            <button class="scientific" onclick="addFunction('√(')">√</button>
+            
+            <button class="scientific" onclick="addFunction('π')">π</button>
+            <button class="scientific" onclick="addFunction('e')">e</button>
+            <button class="scientific" onclick="addFunction('(')">(</button>
+            <button class="scientific" onclick="addFunction(')')">)</button>
+            <button class="operator" onclick="addOperator('^')">x^y</button>
+            
+            <button onclick="clearAll()">AC</button>
+            <button onclick="deleteLast()">DEL</button>
+            <button class="operator" onclick="addOperator('%')">%</button>
+            <button class="operator" onclick="addOperator('/')">÷</button>
+            <button class="operator" onclick="addOperator('×')">×</button>
+            
+            <button onclick="addNumber('7')">7</button>
+            <button onclick="addNumber('8')">8</button>
+            <button onclick="addNumber('9')">9</button>
+            <button class="operator" onclick="addOperator('-')">-</button>
+            <button class="scientific" onclick="addFunction('10^')">10ˣ</button>
+            
+            <button onclick="addNumber('4')">4</button>
+            <button onclick="addNumber('5')">5</button>
+            <button onclick="addNumber('6')">6</button>
+            <button class="operator" onclick="addOperator('+')">+</button>
+            <button class="scientific" onclick="addFunction('log₁₀(')">log₁₀</button>
+            
+            <button onclick="addNumber('1')">1</button>
+            <button onclick="addNumber('2')">2</button>
+            <button onclick="addNumber('3')">3</button>
+            <button class="equals operator" onclick="calculate()">=</button>
+            <button class="scientific" onclick="addFunction('e^')">eˣ</button>
+            
+            <button onclick="addNumber('0')" class="double-width">0</button>
+            <button onclick="addNumber('.')">.</button>
+            <button class="scientific" onclick="addFunction('(-)')">±</button>
+            <button class="scientific" onclick="addFunction('!')">x!</button>
+        </div>
     </div>
     <script src="app.js"></script>
 </body>
