@@ -1,92 +1,97 @@
+:root {
+    --calculator-bg: #2d2d2d;
+    --display-bg: #1a1a1a;
+    --button-bg: #4d4d4d;
+    --operator-bg: #ff9500;
+    --scientific-bg: #3a3a3a;
+    --text-color: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
 body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #000;
-    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    background: #f0f0f0;
 }
 
 .calculator {
-    width: 340px;
-    background-color: #1c1c1c;
-    border-radius: 15px;
+    background: var(--calculator-bg);
+    border-radius: 12px;
     padding: 20px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.8);
+    width: 360px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
-#inputnumber {
-    width: 100%;
+.display {
+    background: var(--display-bg);
+    border-radius: 6px;
     padding: 20px;
-    font-size: 2em;
-    background-color: #000;
-    color: #fff;
-    border: none;
-    border-radius: 10px;
+    margin-bottom: 20px;
     text-align: right;
-    box-sizing: border-box;
-    outline: none;
-    margin-bottom: 15px;
+    color: var(--text-color);
 }
 
-#printoutput {
-    color: #999;
-    text-align: right;
-    font-size: 1.2em;
-    margin-bottom: 10px;
+#previous {
+    font-size: 14px;
+    color: #888;
+    min-height: 18px;
+    margin-bottom: 8px;
 }
 
-table {
-    width: 100%;
-    border-spacing: 8px;
-    border-collapse: separate;
+#current {
+    font-size: 32px;
+    font-weight: 300;
+    word-wrap: break-word;
 }
 
-input[type="button"] {
-    width: 100%;
-    padding: 20px;
-    font-size: 1.5em;
-    border-radius: 15px;
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+}
+
+button {
     border: none;
+    border-radius: 6px;
+    padding: 12px;
+    font-size: 16px;
     cursor: pointer;
-    transition: transform 0.1s ease, box-shadow 0.2s;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-    color: #fff;
+    color: var(--text-color);
+    background: var(--button-bg);
+    transition: all 0.1s ease;
 }
 
-.number {
-    background-color: #333;
+button:hover {
+    filter: brightness(1.1);
 }
 
-.function {
-    background-color: #d4d4d2;
-    color: #000;
+button:active {
+    transform: scale(0.95);
 }
 
 .operator {
-    background-color: #ff9500;
+    background: var(--operator-bg);
+    font-weight: 500;
+}
+
+.scientific {
+    background: var(--scientific-bg);
+    font-size: 14px;
 }
 
 .equals {
-    background-color: #ff9500;
+    background: var(--operator-bg);
+    grid-row: span 2;
 }
 
-input[type="button"]:hover {
-    transform: scale(1.05);
-}
-
-input[type="button"]:active {
-    transform: scale(0.98);
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
-}
-
-input[type="button"].operator,
-input[type="button"].equals {
-    font-weight: bold;
-}
-
-input[type="button"].number,
-input[type="button"].function {
-    font-weight: normal;
+.double-width {
+    grid-column: span 2;
 }
